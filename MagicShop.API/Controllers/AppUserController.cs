@@ -10,7 +10,7 @@ namespace MagicShop.API.Controllers
     [ApiController]
     public class AppUserController : ControllerBase
     {
-        private readonly IAppUserService _appUserService;
+        private  IAppUserService _appUserService;
 
         public AppUserController(IAppUserService appUserService)
         {

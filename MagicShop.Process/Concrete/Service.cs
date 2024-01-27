@@ -66,6 +66,9 @@ namespace MagicShop.Process.Concrete
             }
  
             entity.IsDeleted = true;
+            //_context.Entry(entity).State = EntityState.Modified;
+
+
      
             var result = await _context.SaveChangesAsync();
             if (result > 0)
