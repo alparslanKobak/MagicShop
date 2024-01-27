@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace MagicShop.Process.Concrete
 {
-    public class CardItemService : Service<CartItem>, ICartItemService
+    public class CartItemService : Service<CartItem>, ICartItemService
     {
-        public CardItemService(DatabaseContext context) : base(context)
+        public CartItemService(DatabaseContext context) : base(context)
         {
         }
 
