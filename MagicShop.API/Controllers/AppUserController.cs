@@ -33,20 +33,23 @@ namespace MagicShop.API.Controllers
 
         // POST api/<AppUserController>
         [HttpPost]
-        public void Post([FromBody] AppUser value)
+        public async void Post([FromBody] AppUser value)
         {
+            await _appUserService.AddAsync(value);
         }
 
         // PUT api/<AppUserController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async void Put(Guid id, [FromBody] AppUser value)
         {
+            await _appUserService.UpdateAsync(value, id);
         }
 
         // DELETE api/<AppUserController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async void Delete(Guid id)
         {
+            await _appUserService.SoftDeleteAsync(id);
         }
     }
 }

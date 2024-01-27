@@ -15,7 +15,7 @@ namespace MagicShop.Kernel.Entities
         public string HoroscopeName { get; set; }
 
         [Required]
-        [MaxLength(50)]
+       
         public string HoroscopeDescription { get; set; }
         
         public string HoroscopeIcon { get; set; }
